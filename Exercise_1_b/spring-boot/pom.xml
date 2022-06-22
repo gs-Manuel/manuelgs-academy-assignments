@@ -26,7 +26,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+		<dependency>
+			<groupId>com.github.gs-Manuel</groupId>
+			<artifactId>Exercise-1</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+        <dependency>
+            <groupId>com.github.gs-Manuel</groupId>
+            <artifactId>regular_app</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 	<build>
 		<plugins>
 			<plugin>
