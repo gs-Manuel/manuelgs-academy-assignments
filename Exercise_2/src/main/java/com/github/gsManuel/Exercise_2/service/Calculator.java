@@ -15,7 +15,7 @@ public class Calculator {
         this.CO = co;
     }
 
-    private void run() {
+    public void run() {
         turnOn();
         logger.info("Calculator has just turned ON " + "\n");
         int opCounter = 0;
