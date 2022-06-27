@@ -1,12 +1,11 @@
-package com.github.gsManuel.Exercise_2.controllers;
+package com.github.gsManuel.Exercise_2.service;
 
+import com.github.gsManuel.Exercise_2.controllers.Operations;
 import com.github.gsManuel.Exercise_2.exceptions.IAException;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Scanner;
 
-@Controller
+
 public class CalculatorOperation implements Operations {
 
     Scanner sc = new Scanner(System.in);
@@ -15,22 +14,18 @@ public class CalculatorOperation implements Operations {
     private double b;
     private double ans;
 
-    @GetMapping("/add")
     public void add() {
         ans = Operations.add(a, b);
     }
 
-    @GetMapping("/sub")
     public void sub() {
         ans = Operations.sub(a, b);
     }
 
-    @GetMapping("/mul")
     public void mul() {
         ans = Operations.mul(a, b);
     }
 
-    @GetMapping("/div")
     public void div() {
         ans = Operations.div(a, b);
     }
@@ -38,10 +33,10 @@ public class CalculatorOperation implements Operations {
     /**
      * Method that make all the answer needed for execute the operation
      *
-     * @return
+     * @return Character res
      * @throws IAException
      */
-    public char answers() throws IAException {
+    public Character answers() throws IAException {
         askFirstNumber();
         char res = askOperation();
         askSecondNumber();
@@ -75,7 +70,7 @@ public class CalculatorOperation implements Operations {
      * Method that ask the user for operation he wants to resolve, if he writes an incorrect param an Exception is throwed
      * otherwise it returns a string with the operation that user wants.
      *
-     * @return
+     * @return Character res
      * @throws IAException
      */
     private Character askOperation() throws IAException {

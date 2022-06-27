@@ -1,6 +1,5 @@
 package com.github.gsManuel.Exercise_2.service;
 
-import com.github.gsManuel.Exercise_2.controllers.CalculatorOperation;
 import com.github.gsManuel.Exercise_2.exceptions.IAException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +17,7 @@ public class Calculator {
 
     private void run() {
         turnOn();
+        logger.info("Calculator has just turned ON " + "\n");
         int opCounter = 0;
         while (state == true) {
             try {
@@ -40,6 +40,7 @@ public class Calculator {
                 //Ruptura en la 5a iteraccion
                 if (opCounter < 5) {
                     turnOff();
+                    logger.info("Calculator has just turned OFF " + "\n");
                 }
             } catch (IAException e) {
                 logger.error(e.getMessage());
