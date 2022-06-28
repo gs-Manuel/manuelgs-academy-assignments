@@ -2,10 +2,11 @@ package com.github.gsManuel.Exercise_2.service;
 
 import com.github.gsManuel.Exercise_2.controllers.Operations;
 import com.github.gsManuel.Exercise_2.exceptions.IAException;
+import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
 
-
+@Service
 public class CalculatorOperation implements Operations {
 
     Scanner sc = new Scanner(System.in);
